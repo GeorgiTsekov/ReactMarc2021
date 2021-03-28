@@ -1,0 +1,49 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "country": "Italy",
+            "town": "Sicily",
+            "content": "nice place",
+            "description": "lorem5",
+            "votes": 0,
+            "imageURL": "https://pln.blob.core.windows.net/excursion-images/9b088fe9-c642-45ff-9f54-be4da2f0b00b"
+        },
+        {
+            "id": 2,
+            "country": "Italy",
+            "town": "Rome",
+            "content": "nice place",
+            "description": "lorem5",
+            "votes": 0,
+            "imageURL": "https://sofitel.accor.com/destinations/imagerie/roma-overview-1400x788-1-c962_1400x788.jpg"
+        },
+        {
+            "id": 3,
+            "country": "Bulgaria",
+            "town": "Sunny Beach",
+            "content": "nice place",
+            "description": "lorem5",
+            "votes": 0,
+            "imageURL": "https://media.nomadicmatt.com/2021/sunnybeachbad.jpg"
+        },
+        {
+            "id": 4,
+            "country": "France",
+            "town": "Riviera",
+            "content": "nice place",
+            "description": "lorem5",
+            "votes": 0,
+            "imageURL": "https://www.beauchamp.com/_wp/wp-content/uploads/2017/01/Moving-to-the-French-Riviera1.jpg"
+        },
+        {
+            "id": 5,
+            "country": "Turkey",
+            "town": "Capadokia",
+            "content": "nice place",
+            "description": "lorem5",
+            "votes": 0,
+            "imageURL": "http://vakanciq-roza.eu/wp-content/uploads/2020/01/Kapadokia-Baloni.jpg"
+        }
+    ]
+}
