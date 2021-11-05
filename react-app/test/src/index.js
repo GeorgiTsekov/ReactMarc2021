@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import ClassApp from './ClassApp';
 import reportWebVitals from './reportWebVitals';
+const number = 1
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ClassApp flag={true} name={"Val"} />
   </React.StrictMode>,
   document.getElementById('root')
 );

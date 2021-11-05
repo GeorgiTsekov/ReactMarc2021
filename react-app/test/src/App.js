@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { render } from 'react-dom';
+import LearnReact from './LearnReact';
+import Code from './Code';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>Functional Component</p>
+        <p>{props.name}</p>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit
+          <Code number={props.number}>
+            <p>
+              src/App.js
+            </p>
+          </Code> and save to reload.
         </p>
-        <p>
-          Hello
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <LearnReact />
       </header>
     </div>
   );
