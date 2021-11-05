@@ -3,20 +3,52 @@ import logo from './logo.svg';
 import './App.css';
 import { render } from 'react-dom';
 import LearnReact from './LearnReact';
+import Input from './Input';
 import Code from './Code';
-import Counter from './Counter';
+import Counters from './Counters';
 
 class ClassApp extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            hideCounters: false,
+            isLoading: true
+        }
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                isLoading: false
+            })
+        }, 2000)
+    }
+
+    toggleCounters = () => {
+        this.setState({
+            hideCounters: !this.state.hideCounters
+        })
+    }
+
     render() {
+        if (this.state.isLoading) {
+            return (
+                <span>Loading...</span>
+            )
+        }
+
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <p>Class Component</p>
-                    <Counter counter={0} />
-                    <Counter counter={0} />
-                    <Counter counter={10} />
-                    <Counter counter={20} />
+                    <Input />
+                    {this.state.hideCounters ? null :
+                        <div>
+                            <p>Class Component</p>
+                            <Counters/>
+                        </div>
+                    }
                     <p>
                         Edit
                         <Code number={this.props.number}>
@@ -26,8 +58,9 @@ class ClassApp extends Component {
                         </Code> and save to reload.
                     </p>
                     <LearnReact />
-                </header>
-            </div>
+                    <button onClick={this.toggleCounters}>Toggle Counters</button>
+                </header >
+            </div >
         )
     }
 }
