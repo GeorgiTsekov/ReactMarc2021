@@ -16,9 +16,17 @@ class Input extends Component {
     }
 
     render() {
+        const { name } = this.props
+
+        if (!name) {
+            return (
+                <span>Loading...</span>
+            )
+        }
+
         return (
             <div>
-                <input onChange={this.changeValue} />
+                <input onChange={this.changeValue} value={name} />
                 <p>{this.state.value}</p>
             </div>
         )

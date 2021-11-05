@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import CounterLabel from "./CounterLabel";
+import styles from './counter.module.css'
 
 class Counter extends Component {
     constructor(props) {
@@ -10,15 +12,17 @@ class Counter extends Component {
     }
 
     updateCounter = () => {
+        const { counter } = this.state
+
         this.setState({
-            counter: this.state.counter + 1
+            counter: counter + 1
         })
     }
 
     render() {
         return (
-            <div>
-                {this.state.example} Counter: {this.state.counter}
+            <div className={styles.wrapper}>
+                <CounterLabel counter={this.state.counter} />
                 <button onClick={this.updateCounter}>Click me</button>
             </div>
         )
